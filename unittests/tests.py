@@ -42,6 +42,8 @@ class AnotherTestCase(unittest.TestCase):
 	def test_3(self):
 		self.assertTrue(True)
 
+	def test_fail(self)
+		1/0
 
 if __name__ == '__main__':
 	suite = unittest.TestSuite()
