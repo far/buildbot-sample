@@ -1,11 +1,14 @@
 #!/usr/bin/env python
 
-import unittest2 as unittest
+try:
+    import unittest2 as unittest
+except ImportError:
+    import unittest
 
 class MyTestRunner(unittest.TextTestRunner):
 
 	def __init__(self, *args, **kwargs):
-		super(TextTestRunner, self).__init__(*args, **kwargs)
+		super(unittest.TextTestRunner, self).__init__()
 
 
 class MyTest(unittest.TestCase):
@@ -20,6 +23,6 @@ class MyTest(unittest.TestCase):
 if __name__ == '__main__':
 #	suite = unittest.TestSuite()
 #	suite.addTest(unittest.makeSuite(MyTest))
-	runner = MyTestRunner(verbosity=2)
+	runner = unittest.TextTestRunner(verbosity=2)
 	runner.run(unittest.makeSuite(MyTest))
 #	unittest.main()
