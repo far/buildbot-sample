@@ -21,13 +21,13 @@ class MyTest(unittest.TestCase):
 
 	def test_two(self):
 		self.assertFalse(not True)
-
-	"""
+    
+    """
 	def test_err(self):
 		self.assertEquals(1, 0)
-	"""
+    """
 
-	def test_raise(self):
+	def test_skip(self):
 		raise unittest.SkipTest
 
 class AnotherTestCase(unittest.TestCase):
