@@ -19,6 +19,9 @@ class MyTest(unittest.TestCase):
 	def test_two(self):
 		self.assertFalse(not True)
 
+	def test_err(self):
+		self.assertEquals(1, 0)
+
 
 if __name__ == '__main__':
 #	suite = unittest.TestSuite()
