@@ -38,6 +38,9 @@ class AnotherTestCase(unittest.TestCase):
 	def test_another_one(self):
 		self.assertTrue(True)
 
+	def test_second(self):
+		self.assertEquals(1, 1)
+
 if __name__ == '__main__':
 	suite = unittest.TestSuite()
 	suite.addTest(unittest.makeSuite(MyTest))
