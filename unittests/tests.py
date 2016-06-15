@@ -45,5 +45,3 @@ if __name__ == '__main__':
 	suite.addTest(unittest.makeSuite(AnotherTestCase))
 	runner = unittest.TextTestRunner(verbosity=2)
 	runner.run(suite)
-#	runner.run(unittest.makeSuite(MyTest, AnotherTestCase))
-#	unittest.main()
